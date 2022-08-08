@@ -1,6 +1,20 @@
 import numpy as np
 import random
 
+def computer_random(board):
+    empties = np.where(board ==" ")
+
+    print(empties)
+
+    for i in empties[0]:
+        for j in empties[1]:
+            new_empties = 3*i + j
+
+    print(new_empties)
+
+    move = empties[0][0]
+
+    return move
 
 def print_board(board_array):
     print("Printing board")
@@ -150,6 +164,10 @@ def play_game():
 
     # initialize the board
     board = init_board()
+
+    print(computer_random(board))
+
+    exit()
 
     # keep track of if the game has been won
     win = False
